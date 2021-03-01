@@ -25,15 +25,15 @@ def test_get_posts_api_invalid_postId(url_config):
 
     client.sees(response).status_code(404).body(expected_body)
     
-# def test_get_comments_by_postId(url_config):
-#     client = RestClient(url_config)
-#     response = client.sends().comments(postId=1).get()
+def test_get_comments_by_postId(url_config):
+    client = RestClient(url_config)
+    response = client.sends().comments(postId=1).get()
 
-#     client.sees(response).status_code(200).count(5)
+    client.sees(response).status_code(200).count(5)
 
-# def test_get_comments_by_postId_query(url_config):
-#     client = RestClient(url_config)
-#     response = client.sends().comments(query="?postId=1").get()
+def test_get_comments_by_postId_query(url_config):
+    client = RestClient(url_config)
+    response = client.sends().comments(query="?postId=1").get()
 
-#     client.sees(response).status_code(200).count(5)
+    client.sees(response).status_code(200).count(5)
     
