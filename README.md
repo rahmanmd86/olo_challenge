@@ -32,4 +32,53 @@ The API is defined here https://jsonplaceholder.typicode.com/guide
 
 # Solution
 
-## Author: Md Mahbubur Rahman
+This repo contains the test framework and the tests as part of the solution for the olo offline challenge
+
+## Getting started
+
+## Prerequisites
+- python >= 3.7
+- pip >= 20.0.2
+- pipenv >= 2018.11.26
+
+## Project Structure
+
+```
+olo_challenge
+    |-- src
+        |-- rest_client.py
+        |-- helper.py
+    |-- tests
+        |-- test_get_api.py
+        |-- test_post_api.py
+        |-- test_put_api.py
+        |-- test_delete_api.py
+    |-- Pipfile
+    |-- Pipfile.lock
+    |-- url_config.json
+    |-- conftest.py
+    |-- pytest.ini
+    |-- .gitignore
+```
+
+## Running the tests
+
+1. Clone the repo
+2. Navigate to `olo_challenge`
+3. Install dependencies by using command 
+    - `pipenv install`
+4. Launch virtual environenment by using command
+    - `pipenv shell`
+5. Run the tests by using command
+    - `pytest`
+6. Tests can be run outside virtual environment using command (Optional)
+    - `pipenv run pytest`
+
+- Test reports can be generated as HTML using command
+    - `pytest --html=test_report.html`
+- Tests can be run in parallel using command
+    -  `pytest -n {NUMCPUS}`
+
+#TODO: Enable logging mechanism
+
+### Author: Md Mahbubur Rahman

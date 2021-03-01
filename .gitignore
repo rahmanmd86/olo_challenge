@@ -1,4 +1,4 @@
-test_report.html
+*.html
 .vscode
 .pytest_cache
 assets
