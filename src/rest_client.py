@@ -93,16 +93,24 @@ class RestClient:
     Asserts response body
     """
     def body(self, expected_body={}):
-        resp_json = self.response.json()
-        assert resp_json == expected_body
+        try: 
+            resp_json = self.response.json()
+            assert resp_json == expected_body
+        except:
+            logger.error(f'Expected: {expected_body}, Actual: {resp_json}')
+            raise Exception("Test case failed")
         return self
 
     """
     Asserts response count
     """
     def count(self, expected_count=None):
-        resp_json = self.response.json()
-        assert len(resp_json) == expected_count
+        try:
+            resp_json = self.response.json()
+            assert len(resp_json) == expected_count
+        except:
+            logger.error(f'Expected: {expected_count}, Actual: {len(resp_json)}')
+            raise Exception("Test case failed")
         return self
     
 
