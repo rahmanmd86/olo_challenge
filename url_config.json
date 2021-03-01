@@ -1,0 +1,5 @@
+{
+    "base_url": "https://jsonplaceholder.typicode.com",
+    "posts": "/posts/:postId",
+    "comments": "/comments"
+}
